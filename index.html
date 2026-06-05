@@ -17,6 +17,7 @@
             color: white;
             padding: 15px;
             text-align: center;
+            position: relative;
         }
         nav {
             background: #FFA07A;
@@ -41,39 +42,38 @@
             padding: 10px;
             margin-top: 20px;
         }
-        div.scroll_news {
+        .scroll_news {
             height: 150px;
-            width : 900px;
+            width: 900px;
             overflow-y: scroll;
         }
         .top-left-logo {
             position: absolute;
             top: 0px;
-            left: 161px;
-            width: 248px;
+            left: 140px;
+            width: 293px;
             height: auto;
         }
         .top-right-logo {
             position: absolute;
             top: 0px;
-            left: 1160px;
-            width: 318px;
+            left: 1120px;
+            width: 251px;
             height: auto;
         }
         .welcome-section {
-            background-image: url('header-bg.png'); /* Replace with your image */
+            background-image: url('header-bg.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: #6A1FBF;   
+            /*color: #6A1FBF;*/
             text-align: left;
             position: relative;
         }
         .welcome-overlay {
-          background-color: rgba(255, 255, 255, 0.7);; /* visible overlay */
-          padding: 0px 20px;
+            background-color: rgba(255, 255, 255, 0.65);
+            padding: 0px 20px;
         }
-
     </style>
 </head>
 
@@ -82,9 +82,10 @@
         <img src="me.jpg" alt="Logo" class="top-left-logo">
         <img src="lab_logo.png" alt="Logo" class="top-right-logo">
         <h1>Miao Liu （刘淼）</h1>
-        <p>Assistant Professor at Tsinghua University, Collage of AI</p>
+        <p>Assistant Professor at Tsinghua University, College of AI</p>
         <p>EX-Research Scientist at META GenAI</p>
     </header>
+
     <nav>
         <a href="#home">Home</a>
         <a href="#news">News</a>
@@ -93,38 +94,51 @@
         <a href="#students">Students</a>
         <a href="#contact">Contact</a>
     </nav>
+
     <div class="container">
+
         <section id="home">
-            <!-- <h2>Welcome</h2> -->
             <div class="welcome-section">
                 <div class="welcome-overlay">
-                <p>I'm an Assistant Professor at Tsinghua University, College of Artificial Intelligence.  </p>               
-                <p>I'm currently leading the <strong>MEOW</strong> (<strong>M</strong>odeling <strong>E</strong>gocentric <strong>O</strong>mni <strong>W</strong>orld) Lab, which is committed to the following research agenda: Designing human-centered AI that sees through your eyes, learns your skills, and understands your intentions -- 构建能“看你所见、学你所会、懂你所想”的下一代人本智能系统</p>
-
-
-                Previously, I was a Research Scientist at META GenAI, primarily focusing on egocentric vision and generative AI models. I completed my Ph.D. in Robotics at Georgia Tech, advised by Prof. James Rehg. I also work closely with Prof. Yin Li from the University of Wisconsin–Madison. I was fortunate to collaborate with Prof. Siyu Tang and Prof. Michael Black during my visit to ETH Zurich and the Max Planck Institute. I enjoyed a wonderful internship at Facebook Reality Labs, where I worked with Dr. Chao Li, Dr. Lingni Ma, Dr. Kiran Somasundaram, and Prof. Kristen Grauman on egocentric action recognition and localization. I am honored to have received several awards, including Best Paper Candidate at CVPR 2022 and ECCV 2024, and the BMVC Best Student Paper Award. As a primary contributor, I have helped construct several widely recognized egocentric video datasets, including <strong>Ego4D</strong>, <strong>Ego-Exo4D</strong>, <strong>EGTEA Gaze+</strong>, and the <strong>Behavior Vision Suite</strong>. I have also desgined multiple models that will be deployed in the next-generation smart glasses developed by <strong>Meta Reality Labs</strong>. During my time at <strong>Meta GenAI</strong>, I was deeply involved in the training and evaluation of large-scale generative multimodal models, including <strong>EMU</strong>, <strong>Llama3</strong>, and <strong>Llama4</strong> (multimodal components only).</p>
-
-
-
-              <p style="font-size: 12px;">*This background image of Jaime Lannister charging alone at Daenerys and her dragon reveals what it often takes to do science—you must be willing to stand as the lonely warrior.
-             </p>
-              </div>
-
-            </div>
-            <div>
-
-              <p><strong>Our research is dedicated to <em>Bridging Minds and Machines</em></strong> by leveraging <em>egocentric vision</em> and <em>generative AI</em> to enable AI systems that understand and anticipate human behavior and intentions, and thereby assist human daily life. Our key research directions include:</p>
-
-              <ul>
-                <li><strong>Human Skill Transfer:</strong> Facilitating skill transfer between humans and from humans to robots through augmented reality, enabling efficient and natural human-AI collaboration.</li>
-                <li><strong>Personalized AI Systems:</strong> Building generative AI models that continuously evolve based on user interaction history and preferences, capable of understanding context and adapting to individual users.</li>
-                <li><strong>AI Agents with Theory of Mind:</strong> Developing proactive AI agents that model users’ intentions and cognitive load, leading to more intuitive and seamless human-AI interaction.</li>
-              </ul>
+                    <p>
+                        I'm an Assistant Professor at Tsinghua University, College of Artificial Intelligence.
+                    </p>
+                    <p style="color: #6A1FBF;">
+                        I'm currently leading the <strong>MEOW</strong> (<strong>M</strong>odeling <strong>E</strong>gocentric <strong>O</strong>mni <strong>W</strong>orld) Lab, which is committed to the following research agenda: Designing human-centered AI that sees through your eyes, learns your skills, and understands your intentions -- 构建能“看你所见、学你所会、懂你所想”的下一代人本智能系统
+                    </p>
+                    <p>
+                        Previously, I was a Research Scientist at META GenAI, primarily focusing on egocentric vision and generative AI models. I completed my Ph.D. in Robotics at Georgia Tech, advised by Prof. James Rehg. I also work closely with Prof. Yin Li from the University of Wisconsin–Madison. I was fortunate to collaborate with Prof. Siyu Tang and Prof. Michael Black during my visit to ETH Zurich and the Max Planck Institute. I enjoyed a wonderful internship at Facebook Reality Labs, where I worked with Dr. Chao Li, Dr. Lingni Ma, Dr. Kiran Somasundaram, and Prof. Kristen Grauman on egocentric action recognition and localization. I am honored to have received several awards, including Best Paper Candidate at CVPR 2022 and ECCV 2024, and the BMVC 2022 Best Student Paper Award. As a primary contributor, I have helped construct several widely recognized egocentric video datasets, including Ego4D, Ego-Exo4D, EGTEA Gaze+, and the Behavior Vision Suite. I have also desgined multiple models that will be deployed in the next-generation smart glasses developed by Meta Reality Labs. During my time at Meta GenAI, I was deeply involved in the training and evaluation of large-scale generative multimodal models, including EMU, Llama3, and Llama4 (multimodal components only).
+                    </p>
+                    <p style="font-size: 12px;">
+                        *This background image of Jaime Lannister charging alone at Daenerys and her dragon reveals what it often takes to do science—you must be willing to stand as the lonely warrior.*
+                    </p>
+                </div>
             </div>
 
-            <div>
-              <p>My group is always looking for talented students to join us on this journey. For students from Mainland China, please see the note here. For international students, please contact me directly via email.</p>
+            <!-- Research North Star Section -->
+            <div style="display: flex; align-items: flex-start; gap: 40px; margin: 20px 0;">
+
+                <!-- Left: Description + Directions -->
+                <div style="flex: 3;">
+                    <p>
+                        Our research is dedicated to <strong>Bridging Minds and Machines</strong> by leveraging human-centric perception to connect multimodal foundation models, embodied intelligence, and cognitive science, creating <strong>human-centered</strong> AI systems that understand people, adapt to individuals, and proactively assist in daily life. Our key research directions include:
+                    </p>
+                    <ul style="line-height: 1.8; margin-top: 10px;">
+                        <li><strong>Egocentric Vision:</strong> Understanding people through first-person perception of their actions, attention, and interactions with the world.</li>
+                        <li><strong>Embodied AI:</strong> Enabling robots to understand, learn from, and assist people in dynamic human-centered environments.</li>
+                        <li><strong>Personalized Multimodal Foundation Models:</strong> Building AI systems that remember user history, model individual preferences, and provide personalized assistance.</li>
+                        <li><strong>AI with Theory of Mind:</strong> Developing agents that reason about human intentions, beliefs, and cognitive states to anticipate user needs.</li>
+                    </ul>
+                </div>
+
+                <!-- Right: North Star Image -->
+                <div style="flex: 2; text-align: center;">
+                    <img src="North_star.png" alt="Research North Star" style="width: 100%; max-width: 450px; height: auto;">
+                </div>
+
             </div>
+
+            <p>My group is always looking for talented students to join us on this journey.</p>
         </section>
 
         <section id="news">
@@ -151,60 +165,41 @@
                   <li><strong>Nov. 2022:</strong> Our paper on Egocentric Gaze Estimation won the <span style="color:hsla(0,100%,50%,1);">Best Student Paper Prize</span> at BMVC 2022!</li>
                   <li><strong>Sep. 2022:</strong> One paper accepted to BMVC 2022 for <span style="color:hsla(0,100%,50%,1);">spotlight</span> presentation!</li>
                   <li><strong>Aug. 2022:</strong> I started my new journey at META Reality Labs.</li>
-<!--                   <li><strong>Jul. 2022:</strong> Two papers accepted at ECCV 2022.</li>
-                  <li><strong>Jun. 2022:</strong> I successfully defended my thesis!</li>
-                  <li><strong>Apr. 2022:</strong> Technical talk at META AI Research.</li>
-                  <li><strong>Mar. 2022:</strong> Technical talk at Amazon.</li>
-                  <li><strong>Mar. 2022:</strong> Our Ego4D paper was accepted to CVPR 2022 for <span style="color:hsla(0,100%,50%,1);">oral</span> presentation, <span style="color:hsla(0,100%,50%,1);">Best Paper Finalist</span>.</li>
-                  <li><strong>Feb. 2022:</strong> Technical talk at Apple.</li>
-                  <li><strong>Oct. 2021:</strong> Our Ego4D project has launched! Check out the <a href="https://arxiv.org/pdf/2110.07058.pdf">arXiv</a> paper.</li>
-                  <li><strong>Oct. 2021:</strong> One paper accepted to 3DV 2021.</li>
-                  <li><strong>Jul. 2021:</strong> I passed my thesis proposal.</li> -->
-<!--                   <li><strong>Jan. 2021:</strong> One paper accepted to IEEE TPAMI.</li>
-                  <li><strong>Oct. 2020:</strong> Technical talk "Towards an In-Depth Understanding of Egocentric Actions" at Facebook Reality Lab.</li>
-                  <li><strong>Aug. 2020:</strong> Invited talk at ECCV 2020 Workshop on Egocentric Perception, Interaction and Computing (EPIC).</li>
-                  <li><strong>Aug. 2020:</strong> One paper accepted to BMVC 2020 for <span style="color:hsla(0,100%,50%,1);">oral</span> presentation!</li>
-                  <li><strong>Jul. 2020:</strong> One paper accepted to IMWUT (UbiComp 2020).</li>
-                  <li><strong>Jul. 2020:</strong> One paper accepted to ECCV 2020 for <span style="color:hsla(0,100%,50%,1);">oral</span> presentation!</li>
-                  <li><strong>Jun. 2020:</strong> Invited talk at CVPR 2020 Workshop on Egocentric Perception, Interaction and Computing (EPIC).</li>
-                  <li><strong>Jun. 2020:</strong> I won 2nd place in the <a href="https://epic-kitchens.github.io/Reports/EPIC-KITCHENS-Challenges-2020-Report.pdf">EPIC-KITCHENS Challenge 2020</a> for Action Recognition in Unseen Environments.</li>
-                  <li><strong>Jun. 2020:</strong> Started my internship at Facebook Reality Lab with <a href="https://scholar.google.com/citations?user=9uWs7GUAAAAJ&hl=en">Dr. Chao Li</a> and <a href="https://www.linkedin.com/in/kiran-somasundaram/">Dr. Kiran Somasundaram</a> (Jun. 2020 – Dec. 2020).</li>
-                  <li><strong>Jan. 2020:</strong> Started my internship with <a href="https://ps.is.tuebingen.mpg.de/person/stang">Prof. Siyu Tang</a> at ETH Zurich (Jan. 2020 – Apr. 2020).</li>
-                  <li><strong>Sep. 2019:</strong> Started my internship with <a href="https://ps.is.tuebingen.mpg.de/person/stang">Prof. Siyu Tang</a> and <a href="https://ps.is.tuebingen.mpg.de/person/black">Prof. Michael Black</a> at Max Planck Institute (Sep. 2019 – Jan. 2020).</li> -->
                 </ul>
             </div>
         </section>
+
         <section id="publications">
             <h2>Selected Publications</h2>
             <div>
                 See Full Publication List at my <a href="https://scholar.google.com/citations?user=Ud7boIwAAAAJ&hl=en">Google Scholar</a> page.
             </div>
-            <ul>      
+            <ul>
                         <li>Kuan Zhang, Dongchen Liu, Qiyue Zhao, Jinkun Hou, Xinran Zhang, Qinlei Xie, <b>Miao Liu†</b>, Yiming Li†.
-                            <i>GameVerse: Can Vision-Language Models Learn from Video-based Reflection?</i>, accepted by the International Conference on Machine Learning (ICML) 2026
+                            <i>GameVerse: Can Vision-Language Models Learn from Video-based Reflection?</i>, accepted by the International Conference on Machine Learning (ICML) 2026. †: Co-corresponding Author
                         </li> 
                         <li>Jiacheng Hua, Yishu Yin, Yuhang Wu, Tai Wang, Yifei Huang, <b>Miao Liu</b>.
-                            <i>Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning</i>, accepted by the Association for Computational Linguistics (ACL) 2026
+                            <i>Unleashing Spatial Reasoning in Multimodal Large Language Models via Textual Representation Guided Reasoning</i>, accepted by the Association for Computational Linguistics (ACL) 2026.
                             (<span style="color:hsla(0,100%,50%,1);">Oral</span>, acceptance rate <span><strong>3.3<span>&#37;</span></strong></span>). 
                         </li>
-                        <li>Jinzhao Li, Yinuo Chen, Dongxu Piao, Panwang Pan, Yifan Yu, Dong Wang, Honglei Yan, Liang Yue, Shaofei Wang, Yixin Chen, Siyuan Huang, <b>Miao Liu</b>. 
-                            <i>EgoProx: Evaluating MLLMs on Egocentric 3D Proximity Reasoning Across a Cognitive Hierarchy</i>, accepted by Computer Vision and Pattern Recognition Conference (CVPR) 2026
+                        <li>Jinzhao Li, Yinuo Chen*, Dongxu Piao*, Panwang Pan, Yifan Yu, Dong Wang, Honglei Yan, Liang Yue, Shaofei Wang, Yixin Chen, Siyuan Huang, <b>Miao Liu</b>. 
+                            <i>EgoProx: Evaluating MLLMs on Egocentric 3D Proximity Reasoning Across a Cognitive Hierarchy</i>, accepted by Computer Vision and Pattern Recognition Conference (CVPR) 2026.
                         </li>
                         <li>Taiying Peng, Jiacheng Hua, <b>Miao Liu†</b>, Feng Lu†. 
-                            <i>In the Eye of MLLM: Benchmarking Egocentric Video Intent Understanding with Gaze-Guided Prompting</i>, accepted by Neural Information Systems Processing (NeurIPS) 2025 
+                            <i>In the Eye of MLLM: Benchmarking Egocentric Video Intent Understanding with Gaze-Guided Prompting</i>, accepted by Neural Information Systems Processing (NeurIPS) 2025.
                             [<a href="https://arxiv.org/pdf/2509.07447">arXiv</a>] †: Co-corresponding Author
                         </li>
                         <li>Zeyi Huang*, Yuyang Ji*, Xiaofang Wang, Nikhil Mehta, Tong Xiao, Donghyun Lee, Sigmund Vanvalkenburgh, Shengxin Zha, Bolin Lai, Licheng Yu, Ning Zhang, Yong Jae Lee†, <b>Miao Liu†</b>. 
-                            <i>Building a Mind Palace: Structuring Environment-Grounded Semantic Graphs for Effective Long Video Analysis with LLMs</i>, accepted by Computer Vision and Pattern Recognition Conference (CVPR) 2025 
-                            [<a href="https://arxiv.org/pdf/2501.04336">arXiv</a>]
+                            <i>Building a Mind Palace: Structuring Environment-Grounded Semantic Graphs for Effective Long Video Analysis with LLMs</i>, accepted by Computer Vision and Pattern Recognition Conference (CVPR) 2025. 
+                            [<a href="https://arxiv.org/pdf/2501.04336">arXiv</a>] †: Co-corresponding Author
                         </li>
                         <li>Bolin Lai, Felix Juefei-Xu, <b>Miao Liu</b>, Xiaoliang Dai, Nikhil Mehta, Chenguang Zhu, Zeyi Huang, James M. Rehg, Sangmin Lee, Ning Zhang, Tong Xiao. 
-                            <i>Unleashing In-context Learning of Autoregressive Models for Few-shot Image Manipulation</i>, accepted by Computer Vision and Pattern Recognition Conference (CVPR) 2025 
+                            <i>Unleashing In-context Learning of Autoregressive Models for Few-shot Image Manipulation</i>, accepted by Computer Vision and Pattern Recognition Conference (CVPR) 2025.
                             (<span style="color:hsla(0,100%,50%,1);">Spotlight</span>). 
                             [<a href="https://bolinlai.github.io/projects/InstaManip/">arXiv</a>]
                         </li>
                         <li>Bolin Lai, Xiaoliang Dai, Lawrence Chen, Guan Pang, James M. Rehg, <b>Miao Liu</b>. 
-                            <i>LEGO: Learning EGOcentric Action Frame Generation via Visual Instruction Tuning</i>, accepted by European Conference on Computer Vision (ECCV) 2024 
+                            <i>LEGO: Learning EGOcentric Action Frame Generation via Visual Instruction Tuning</i>, accepted by European Conference on Computer Vision (ECCV) 2024.
                             (<span style="color:hsla(0,100%,50%,1);">Oral, Best Paper Award Candidate 15/8585</span>). 
                             [<a href="https://arxiv.org/pdf/2312.03849">arXiv</a>]
                         </li>
@@ -226,10 +221,6 @@
                             <i>In the Eye of Transformer: Global–Local Correlation for Egocentric Gaze Estimation and Beyond</i>, accepted by International Journal of Computer Vision (IJCV). †: Student Mentor 
                             [<a href="https://link.springer.com/article/10.1007/s11263-023-01879-7">arXiv</a>]
                         </li>
-<!--                         <li>Bolin Lai*, Hongxin Zhang*, <b>Miao Liu*</b>, Aryan Pariani*, Fiona Ryan, Wenqi Jia, Shirley Anugrah Hayati, James M. Rehg, Diyi Yang. 
-                            <i>Werewolf Among Us: A Multimodal Dataset for Modeling Persuasion Behaviors in Social Deduction Games</i>, accepted by the Association for Computational Linguistics (ACL) 2023 (Findings). 
-                            [<a href="https://arxiv.org/pdf/2212.08279.pdf">arXiv</a>] *: Equal Contribution
-                        </li> -->
                         <li>Bolin Lai, <b>Miao Liu†</b>, Fiona Ryan, James M. Rehg. 
                             <i>In the Eye of Transformer: Global-Local Correlation for Egocentric Gaze Estimation</i>, accepted by British Machine Vision Conference (BMVC) 2022. 
                             †: Student Mentor, Co-corresponding Author (<span style="color:hsla(0,100%,50%,1);">Spotlight, Best Student Paper Prize</span>). 
@@ -248,42 +239,26 @@
                             (<span style="color:hsla(0,100%,50%,1);">Oral, best paper finalist, 33/8161</span>). 
                             [<a href="https://arxiv.org/pdf/2110.07058.pdf">arXiv</a>] Key driver for <b>Social</b> Benchmark and <b>Forecasting</b> Benchmark
                         </li>
-<!--                         <li><b>Miao Liu</b>, Dexin Yang, Yan Zhang, Zhaopeng Cui, James M. Rehg, and Siyu Tang. 
-                            <i>4D Human Body Capture from Egocentric Video via 3D Scene Grounding</i>, accepted by International Conference on 3D Vision. 
-                            [<a href="https://arxiv.org/abs/2011.13341">arXiv</a>] [<a href="https://aptx4869lm.github.io/4DEgocentricBodyCapture/">project page</a>]
-                        </li> -->
-<!--                         <li>Yin Li, <b>Miao Liu</b>, and James M. Rehg. 
-                            <i>In the Eye of the Beholder: Gaze and Actions in First Person Video</i>, accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2021. 
-                            [<a href="https://arxiv.org/abs/2006.00626">arXiv</a>]
-                        </li> -->
                         <li><b>Miao Liu</b>, Xin Chen, Yun Zhang, Yin Li, and James M. Rehg. 
                             <i>Attention Distillation for Learning Video Representations</i>, accepted by British Machine Vision Conference (BMVC) 2020 
                             (<span style="color:hsla(0,100%,50%,1);">Oral</span>, acceptance rate <span><strong>5.0<span>&#37;</span></strong></span>). 
                             [<a href="https://www.bmvc2020-conference.com/assets/papers/0006.pdf">pdf</a>] [<a href="https://aptx4869lm.github.io/AttentionDistillation/">project page</a>]
                         </li>
-<!--                         <li>Yun Zhang*, Shibo Zhang*, <b>Miao Liu</b>, Elyse Daly, Samuel Battalio, Santosh Kumar, Bonnie Spring, James M. Rehg, Dr. Nabil Alshurafa. 
-                            <i>SyncWISE: Window Induced Shift Estimation for Synchronization of Video and Accelerometry from Wearable Sensors</i>, accepted by Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. (IMUWT/UbiComp) 2020 (* denotes equal contribution). 
-                            [<a href="https://dl.acm.org/doi/abs/10.1145/3411824">pdf</a>]
-                        </li> -->
                         <li><b>Miao Liu</b>, Siyu Tang, Yin Li, and James M. Rehg. 
                             <i>Forecasting Human Object Interaction: Joint Prediction of Motor Attention and Actions in First Person Vision</i>, accepted by European Conference on Computer Vision (ECCV) 2020 
                             (<span style="color:hsla(0,100%,50%,1);">Oral</span>, acceptance rate <span><strong>2.0<span>&#37;</span></strong></span>). 
                             [<a href="http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123460681.pdf">pdf</a>] [<a href="https://aptx4869lm.github.io/ForecastingHOI/">project page</a>]
                         </li>
-<!--                         <li>Yin Li, <b>Miao Liu</b>, and James M. Rehg. 
-                            <i>In the Eye of Beholder: Joint Learning of Gaze and Actions in First Person Video</i>, accepted by European Conference on Computer Vision (ECCV) 2018. 
-                            [<a href="http://openaccess.thecvf.com/content_ECCV_2018/papers/Yin_Li_In_the_Eye_ECCV_2018_paper.pdf">pdf</a>]
-                        </li> -->
             </ul>
         </section>
+
         <section id="teaching">
             <h2>Teaching</h2>
             <ul>
-                <li>
-                    2026 Spring: Multimodal Generative AI System Design (80940012)
-                </li>
-            </ul> 
+                <li>2026 Spring: Multimodal Generative AI System Design (80940012)</li>
+            </ul>
         </section>
+
         <section id="students">
             <h2>Students</h2>
             <ul>
@@ -294,25 +269,25 @@
                     <p>Jinzhao Li, 2026 - </p>
                     <p>Yuhang Wu, 2026 - </p>
                 </li>
-            </ul> 
+            </ul>
         </section>
+
         <section id="Alumni">
             <h2>Alumni</h2>
-
-            </ul> 
         </section>
+
         <section id="contact">
             <h2>Contact</h2>
             <ul>
-                <li>
-                    miaoliu@mail.tsinghua.edu.cn; lmaptx4869@gmail.com
-                </li>
-            </ul> 
+                <li>miaoliu@mail.tsinghua.edu.cn; lmaptx4869@gmail.com</li>
+            </ul>
         </section>
+
     </div>
+
     <footer>
         <p>&copy; 2025 Miao Liu | Academic Website</p>
     </footer>
+
 </body>
 </html>
-
