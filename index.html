@@ -87,6 +87,7 @@ main section { padding: 52px 0; border-bottom: 1px solid var(--line); }
 .archive-wrap { border: 0!important; }
 summary { color: var(--purple); font-size: 13px; font-weight: 650; }
 .topic-index { scroll-margin-top: 90px; margin-bottom: 20px; }
+.publication-overview { margin-bottom: 18px; }
 .filter-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--muted); margin-bottom: 10px; }
 .topic-options { display: flex; flex-wrap: wrap; gap: 9px; }
 .topic-options button { padding: 9px 13px; border: 1px solid #ddcce6; border-radius: 4px; color: var(--purple); background: white; font-size: 12px; text-align: left; }
@@ -304,6 +305,20 @@ h1 span { font-size: 1em; letter-spacing: 0; }
 
 .people a { text-decoration: none; font-weight: 600; }
 .people a:hover { text-decoration: underline; }
+/* A bounded news archive with a visible, draggable scrollbar. */
+.news-hint { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+.news-scroll { max-height: 350px; overflow-y: scroll; scrollbar-gutter: stable; padding-right: 18px; border-block: 1px solid var(--line); }
+.news-scroll::-webkit-scrollbar { width: 12px; }
+.news-scroll::-webkit-scrollbar-track { background: #f0e8f5; border-radius: 8px; }
+.news-scroll::-webkit-scrollbar-thumb { background: #9962b5; border: 2px solid #f0e8f5; border-radius: 8px; }
+.news-scroll::-webkit-scrollbar-thumb:hover { background: var(--purple); }
+@supports not selector(::-webkit-scrollbar) {
+ .news-scroll { scrollbar-color: #9962b5 #f0e8f5; scrollbar-width: auto; }
+}
+@media print { .news-scroll { max-height: none; overflow: visible; padding-right: 0; } .news-hint { display: none; } }
+.earlier-news { margin-top: 18px; }
+.earlier-news > summary { font-size: 16px; }
+.earlier-news[open] > summary { margin-bottom: 14px; }
 </style>
 </head>
 <body>
@@ -491,6 +506,8 @@ h1 span { font-size: 1em; letter-spacing: 0; }
       Latest news
      </h2>
 </div>
+<p class="news-hint" id="news-scroll-hint">Since joining Tsinghua · August 2025 onwards. Scroll for earlier updates.</p>
+<div class="news-scroll" role="region" aria-label="News since joining Tsinghua" aria-describedby="news-scroll-hint" tabindex="0">
 <ul class="news">
 <li>
 <strong>
@@ -522,12 +539,6 @@ h1 span { font-size: 1em; letter-spacing: 0; }
       </strong>
       One paper accepted to ACL 2026 main conference as an oral presentation.
      </li>
-<li class="archive-wrap">
-<details>
-<summary>
-        Earlier news · 2022–2026
-       </summary>
-<ul>
 <li>
 <strong>
           Feb. 2026:
@@ -564,6 +575,12 @@ h1 span { font-size: 1em; letter-spacing: 0; }
          </strong>
          Officially left Meta and joined Tsinghua University, College of AI.
         </li>
+</ul>
+</div>
+<details class="earlier-news">
+<summary>Earlier news · 2022–2025</summary>
+<div class="news-scroll" role="region" aria-label="News before joining Tsinghua" tabindex="0">
+<ul class="news">
 <li>
 <strong>
           Jun. 2025:
@@ -660,9 +677,8 @@ h1 span { font-size: 1em; letter-spacing: 0; }
          I started my new journey at Meta Reality Labs.
         </li>
 </ul>
+</div>
 </details>
-</li>
-</ul>
 </section>
 <section id="publications">
 <p class="eyebrow">
@@ -677,6 +693,9 @@ h1 span { font-size: 1em; letter-spacing: 0; }
      </a>
 </div>
 <div class="topic-index" hidden="">
+<div class="topic-options publication-overview">
+<button aria-pressed="true" data-topic="all" type="button">All selected publications <span>20</span></button>
+</div>
 <p class="filter-label">
       BROWSE BY TOPIC
      </p>
@@ -694,7 +713,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
        <span>9</span>
 </button>
 <button aria-pressed="false" data-topic="generation" type="button">
-       Generative &amp; Personalized AI
+       Media Generation
        <span>3</span>
 </button>
 <button aria-pressed="false" data-topic="spatial" type="button">
@@ -745,7 +764,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
 <div class="paper-year">
        2026
        <span>
-        NeurIPS
+        NeurIPS ED
        </span>
 </div>
 <div>
@@ -760,7 +779,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         .
        </p>
 <p class="paper-detail">
-        Conference on Neural Information Processing Systems (NeurIPS) 2026.
+        Conference on Neural Information Processing Systems (NeurIPS) 2026 · ED Track.
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Egocentric &amp; Video Understanding" class="topic-tag" data-topic="video" type="button">
@@ -800,7 +819,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Oral
         </strong>
-        ).
+        )
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Attention, Intent &amp; Social Cognition" class="topic-tag" data-topic="human" type="button">
@@ -911,8 +930,8 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         The European Conference on Computer Vision (ECCV) 2026.
        </p>
 <div aria-label="Research topics" class="paper-topics">
-<button aria-label="Filter publications: Generative &amp; Personalized AI" class="topic-tag" data-topic="generation" type="button">
-         Generative &amp; Personalized AI
+<button aria-label="Filter publications: Media Generation" class="topic-tag" data-topic="generation" type="button">
+         Media Generation
         </button>
 </div>
 <div class="paper-links">
@@ -978,7 +997,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Oral
         </strong>
-        , acceptance rate 3.3%).
+        , acceptance rate 3.3%)
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Egocentric &amp; Video Understanding" class="topic-tag" data-topic="video" type="button">
@@ -1144,11 +1163,11 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Highlight
         </strong>
-        ).
+        )
        </p>
 <div aria-label="Research topics" class="paper-topics">
-<button aria-label="Filter publications: Generative &amp; Personalized AI" class="topic-tag" data-topic="generation" type="button">
-         Generative &amp; Personalized AI
+<button aria-label="Filter publications: Media Generation" class="topic-tag" data-topic="generation" type="button">
+         Media Generation
         </button>
 </div>
 <div class="paper-links">
@@ -1188,14 +1207,14 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Best Paper Award Candidate 15/8585
         </strong>
-        ).
+        )
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Egocentric &amp; Video Understanding" class="topic-tag" data-topic="video" type="button">
          Egocentric &amp; Video Understanding
         </button>
-<button aria-label="Filter publications: Generative &amp; Personalized AI" class="topic-tag" data-topic="generation" type="button">
-         Generative &amp; Personalized AI
+<button aria-label="Filter publications: Media Generation" class="topic-tag" data-topic="generation" type="button">
+         Media Generation
         </button>
 </div>
 <div class="paper-links">
@@ -1270,7 +1289,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Spotlight
         </strong>
-        ). *: Equal Contribution
+        ) *: Equal Contribution
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Spatial &amp; Embodied Intelligence" class="topic-tag" data-topic="spatial" type="button">
@@ -1306,7 +1325,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Oral
         </strong>
-        ).
+        )
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Egocentric &amp; Video Understanding" class="topic-tag" data-topic="video" type="button">
@@ -1395,7 +1414,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Best Student Paper Prize
         </strong>
-        ).
+        )
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Egocentric &amp; Video Understanding" class="topic-tag" data-topic="video" type="button">
@@ -1415,6 +1434,8 @@ h1 span { font-size: 1em; letter-spacing: 0; }
 </div>
 </div>
 </article>
+
+
 <article class="paper" data-topics="video human spatial" data-year="2022">
 <div class="paper-year">
        2022
@@ -1438,7 +1459,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          best paper finalist, 33/8161
         </strong>
-        ). Key driver for Social Benchmark and Forecasting Benchmark
+        ) Key driver for Social Benchmark and Forecasting Benchmark
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Egocentric &amp; Video Understanding" class="topic-tag" data-topic="video" type="button">
@@ -1483,7 +1504,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Oral
         </strong>
-        , acceptance rate 5.0%).
+        , acceptance rate 5.0%)
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Egocentric &amp; Video Understanding" class="topic-tag" data-topic="video" type="button">
@@ -1528,7 +1549,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
         <strong class="publication-honor">
          Oral
         </strong>
-        , acceptance rate 2.0%).
+        , acceptance rate 2.0%)
        </p>
 <div aria-label="Research topics" class="paper-topics">
 <button aria-label="Filter publications: Egocentric &amp; Video Understanding" class="topic-tag" data-topic="video" type="button">
@@ -1686,7 +1707,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { navigation.classList.remove('open'); menu.setAttribute('aria-expanded','false'); menu.focus(); } });
   const search = document.querySelector('#paper-search'), year = document.querySelector('#paper-year'), papers = [...document.querySelectorAll('.paper')];
   let activeTopic = 'all';
-  const topicDescriptions = {"video": "First-person perception, video representations, actions, and temporal understanding.", "human": "Gaze, motor attention, human intentions, relationships, and theory of mind.", "reasoning": "Vision-language reasoning, memory, streaming assistants, and interactive agents.", "generation": "Visual generation and editing, predictive generative models, and individual preferences.", "spatial": "3D context, spatial reasoning, embodied interaction, and simulation."};
+  const topicDescriptions = {"video": "First-person perception, video representations, actions, and temporal understanding.", "human": "Gaze, motor attention, human intentions, relationships, and theory of mind.", "reasoning": "Vision-language reasoning, memory, streaming assistants, and interactive agents.", "generation": "Image and action-frame generation, visual editing, personalization, and generative prediction.", "spatial": "3D context, spatial reasoning, embodied interaction, and simulation."};
   const topicButtons = [...document.querySelectorAll('.topic-options button')];
   const defaultDescription = 'Papers can appear in more than one topic. Combine a topic with a year or keyword.';
   function setTopic(topic) {
@@ -1696,6 +1717,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
     filter();
   }
   document.querySelectorAll('[data-topic]').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.topic === 'all') { search.value = ''; year.value = 'all'; }
     setTopic(b.dataset.topic);
     if (b.classList.contains('topic-tag')) {
       topicButtons.find(t => t.dataset.topic === activeTopic).focus({preventScroll: true});
