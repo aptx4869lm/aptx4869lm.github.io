@@ -282,6 +282,27 @@ h1 span { font-size: 1em; letter-spacing: 0; }
  .about-copy > .hero-lab { width: 180px; height: 122px; margin: 0 0 12px 14px; }
  .about-copy > .hero-lab img { width: 195px; left: -7px; top: -37px; }
 }
+.identity .eyebrow { font-size: 20px; letter-spacing: .4px; line-height: 1.25; }
+.identity .eyebrow span { display: block; }
+@media (max-width: 600px) {
+ .identity .eyebrow { font-size: 18px; }
+}
+/* Place the portrait in the open center of the scene, away from the rider. */
+@media (min-width: 601px) {
+ .identity { grid-template-columns: minmax(0, 400px) 170px; }
+ .identity-copy { grid-column: 1; grid-row: 1; align-self: start; }
+ .identity h1 { line-height: 1.12; margin-bottom: 4px; }
+ .identity .eyebrow { margin-bottom: 6px; font-size: 20px; letter-spacing: .4px; line-height: 1.25; }
+ .identity .role { line-height: 1.3; margin-bottom: 3px; }
+ .identity .former { line-height: 1.3; }
+ .identity .portrait { grid-column: 2; grid-row: 1; }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+ .identity { grid-template-columns: minmax(0, 300px) 170px; gap: 20px; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+ .identity { grid-template-columns: minmax(0, 300px) 145px; }
+}
 @media print {
  .hero { padding-bottom: 0; }
  .nav, .filters, .topic-index, .results, .buttons, footer, .opportunity, .scene { display: none!important; }
@@ -366,7 +387,8 @@ h1 span { font-size: 1em; letter-spacing: 0; }
 <img alt="Miao Liu" class="portrait" height="170" src="me.jpg" width="145"/>
 <div class="identity-copy">
 <p class="eyebrow">
-      Tsinghua University · College of Artificial Intelligence
+      <span>Tsinghua University</span>
+      <span>College of Artificial Intelligence</span>
      </p>
 <h1>
       Miao Liu
@@ -378,7 +400,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
       Assistant Professor
      </p>
 <p class="former">
-      Previously Research Scientist at Meta GenAI
+      Ex-Research Scientist at Meta GenAI
      </p>
 </div>
 
