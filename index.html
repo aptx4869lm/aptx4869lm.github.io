@@ -513,10 +513,9 @@ h1 span { font-size: 1em; letter-spacing: 0; }
       </strong>
 <br/>
       My group is always looking for talented students interested in human-centered AI.
+<br/>
+<a href="https://zhuanlan.zhihu.com/p/1923696943982413740">For prospective students · 招生介绍（知乎） ↗</a>
      </p>
-<a class="button" href="mailto:miaoliu@mail.tsinghua.edu.cn?subject=Prospective%20MEOW%20Lab%20student">
-      Get in touch ↗
-     </a>
 </div>
 </section>
 <section id="news">
@@ -1666,12 +1665,6 @@ h1 span { font-size: 1em; letter-spacing: 0; }
 <p class="eyebrow">
        Let’s connect
       </p>
-<h2>
-       Say hello.
-      </h2>
-<p>
-       For research collaborations and prospective student inquiries, please reach out by email.
-      </p>
 <div class="contact-links">
 <a href="mailto:miaoliu@mail.tsinghua.edu.cn">
         miaoliu@mail.tsinghua.edu.cn ↗
@@ -1685,17 +1678,7 @@ h1 span { font-size: 1em; letter-spacing: 0; }
        <br/>
        Tsinghua University · Beijing, China
       </p>
-<div class="buttons">
-<a class="button" href="https://scholar.google.com/citations?user=Ud7boIwAAAAJ&amp;hl=en">
-        Google Scholar ↗
-       </a>
-<a class="button" href="https://github.com/aptx4869lm">
-        GitHub ↗
-       </a>
-<button class="button" hidden="" id="print-page">
-        Print / Save PDF
-       </button>
-</div>
+
 </div>
 </div>
 </section>
@@ -1746,7 +1729,6 @@ h1 span { font-size: 1em; letter-spacing: 0; }
   function filter() { const terms = search.value.toLowerCase().trim().split(/\s+/).filter(Boolean); let count = 0; papers.forEach(p => { const show = (activeTopic === 'all' || p.dataset.topics.split(' ').includes(activeTopic)) && (year.value === 'all' || p.dataset.year === year.value) && terms.every(t => p.textContent.toLowerCase().includes(t)); p.hidden = !show; if (show) count++; }); document.querySelector('#paper-count').textContent = `${count} of ${papers.length} selected publications`; document.querySelector('#empty').hidden = count > 0; }
   document.querySelector('.filters').hidden = false; document.querySelector('#paper-count').hidden = false;
   search.addEventListener('input', filter); year.addEventListener('change', filter); document.querySelector('#reset').addEventListener('click', () => { search.value = ''; year.value = 'all'; setTopic('all'); search.focus(); }); filter();
-  const printButton = document.querySelector('#print-page'); printButton.hidden = false; printButton.addEventListener('click', () => window.print());
   document.querySelector('#copyright-year').textContent = new Date().getFullYear();
 })();
   </script>
